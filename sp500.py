@@ -1,5 +1,6 @@
 import requests
 import datetime
+import os
 
 # Webhook URL
 WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
