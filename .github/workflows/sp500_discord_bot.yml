@@ -2,7 +2,7 @@ name: S&P500 Bot
 
 on:
   schedule:
-    - cron: '0 23 * * *'  # UTCで0時 → 日本時間9時
+    - cron: '0 22 * * *'  # UTCで0時 → 日本時間9時
   workflow_dispatch:
 
 jobs:
