@@ -17,7 +17,7 @@ jobs:
           python-version: '3.10'  # ← 文字列で書くのが安全！
 
       - name: Install requests
-        run: pip install requests
+        run: pip install requests yfinance
 
       - name: Run script
         run: python sp500.py
