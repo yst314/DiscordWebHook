@@ -11,9 +11,10 @@ def get_sp500_close():
     
     if not data.empty:
         last_price = data["Close"][ticker].iloc[0]
+        return last_price
     else:
         raise ValueError("No data available for the specified ticker.")
-
+    
 def send_to_discord(price):
     text = f"📈 S&P500 前日終値: ${price}"
     data = {
