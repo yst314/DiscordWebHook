@@ -1,7 +1,8 @@
 import requests
 import datetime
 import os
-import yfinance
+import yfinance as yf
+
 WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
 
 def get_sp500_close():
