@@ -11,6 +11,7 @@ def get_sp500_close():
     
     if not data.empty:
         last_price = data["Close"][ticker].iloc[0]
+        last_price = round(last_price, 2)
         return last_price
     else:
         raise ValueError("No data available for the specified ticker.")
