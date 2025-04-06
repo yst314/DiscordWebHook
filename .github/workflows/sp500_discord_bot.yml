@@ -22,6 +22,6 @@ jobs:
         run: pip install requests yfinance
 
       - name: Run script
-        run: python sp500.py
+        run: python main.py
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
