@@ -24,7 +24,7 @@ def get_financial_summary_from_gemini(prompt: str) -> str | None:
         print("Geminiクライアントが初期化されていません。")
         return None
     try:
-        model_id = "gemini-2.0-flash"
+        model_id = "gemini-2.5-flash-preview-04-17"
         print(f"モデル '{model_id}' を使用してGemini API呼び出し中...")
 
         google_search_tool = Tool(
