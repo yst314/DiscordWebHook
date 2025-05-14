@@ -25,3 +25,4 @@ jobs:
         run: python main.py
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
