@@ -110,7 +110,7 @@ def main_logic() -> None:  # 関数名を変更して __main__ ブロックの�
     if final_summary:
         if DISCORD_WEBHOOK_URL:
             print("\n--- 最終サマリーをDiscordに送信 ---")
-            send_to_discord(final_summary, username="Geminiナカヤマ")
+            send_to_discord(final_summary, username="ナカヤマ")
         else:
             print("\n--- 最終サマリー (コンソール表示のみ) ---")
             print(final_summary)
