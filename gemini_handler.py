@@ -1,6 +1,6 @@
 from google import genai
 from google.genai.types import Tool, GenerateContentConfig, GoogleSearch
-from config import GOOGLE_API_KEY, GEMINI_PROMPT_TEMPLATE
+from config import GOOGLE_API_KEY, GEMINI_PROMPT_TEMPLATE, GEMINI_MODEL_ID
 
 # Gemini APIのクライアントを作成
 gemini_api_client = None
@@ -24,14 +24,13 @@ def get_financial_summary_from_gemini(prompt: str) -> str | None:
         print("Geminiクライアントが初期化されていません。")
         return None
     try:
-        model_id = "gemini-2.5-flash-preview-04-17"
-        print(f"モデル '{model_id}' を使用してGemini API呼び出し中...")
+        print(f"モデル '{GEMINI_MODEL_ID}' を使用してGemini API呼び出し中...")
 
         google_search_tool = Tool(
             google_search=GoogleSearch()
         )  # リンターエラー箇所 (指示により無視)
         response = gemini_api_client.models.generate_content(
-            model=model_id,
+            model=GEMINI_MODEL_ID,
             contents=prompt,
             config=GenerateContentConfig(
                 tools=[google_search_tool],
