@@ -1,9 +1,0 @@
----
-description: 
-globs: 
-alwaysApply: true
----
-- github actionsで実行されます。
-
-
-- python, pipを使用してください。
