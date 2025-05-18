@@ -1,4 +1,4 @@
-name: S&P500 Bot
+name: S&P500 Bot YF
 
 on:
   schedule:
